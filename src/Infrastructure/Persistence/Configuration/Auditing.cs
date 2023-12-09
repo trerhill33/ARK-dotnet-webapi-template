@@ -1,9 +1,9 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using FSH.WebApi.Infrastructure.Auditing;
+using ARK.WebApi.Infrastructure.Auditing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+namespace ARK.WebApi.Infrastructure.Persistence.Configuration;
 
 public class AuditTrailConfig : IEntityTypeConfiguration<Trail>
 {

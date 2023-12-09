@@ -1,9 +1,9 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using ARK.WebApi.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace ARK.WebApi.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbInitializer
 {

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Dashboard;
+namespace ARK.WebApi.Application.Dashboard;
 
 public class StatsDto
 {

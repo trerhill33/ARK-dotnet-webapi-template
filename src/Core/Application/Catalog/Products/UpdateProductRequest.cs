@@ -1,6 +1,6 @@
-using FSH.WebApi.Domain.Common.Events;
+using ARK.WebApi.Domain.Common.Events;
 
-namespace FSH.WebApi.Application.Catalog.Products;
+namespace ARK.WebApi.Application.Catalog.Products;
 
 public class UpdateProductRequest : IRequest<Guid>
 {

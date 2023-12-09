@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Shared.Notifications;
+namespace ARK.WebApi.Shared.Notifications;
 
 public class StatsChangedNotification : INotificationMessage
 {

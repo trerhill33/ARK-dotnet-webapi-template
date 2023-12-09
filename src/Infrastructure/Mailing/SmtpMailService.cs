@@ -1,11 +1,11 @@
-using FSH.WebApi.Application.Common.Mailing;
+using ARK.WebApi.Application.Common.Mailing;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace FSH.WebApi.Infrastructure.Mailing;
+namespace ARK.WebApi.Infrastructure.Mailing;
 
 public class SmtpMailService : IMailService
 {

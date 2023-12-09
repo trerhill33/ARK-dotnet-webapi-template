@@ -1,11 +1,11 @@
 using System.Reflection;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Domain.Catalog;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
+using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Domain.Catalog;
+using ARK.WebApi.Infrastructure.Persistence.Context;
+using ARK.WebApi.Infrastructure.Persistence.Initialization;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Catalog;
+namespace ARK.WebApi.Infrastructure.Catalog;
 
 public class BrandSeeder : ICustomSeeder
 {

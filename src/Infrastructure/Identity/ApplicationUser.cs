@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 public class ApplicationUser : IdentityUser
 {

@@ -1,10 +1,10 @@
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using FSH.WebApi.Application.Common.FileStorage;
-using FSH.WebApi.Domain.Common;
-using FSH.WebApi.Infrastructure.Common.Extensions;
+using ARK.WebApi.Application.Common.FileStorage;
+using ARK.WebApi.Domain.Common;
+using ARK.WebApi.Infrastructure.Common.Extensions;
 
-namespace FSH.WebApi.Infrastructure.FileStorage;
+namespace ARK.WebApi.Infrastructure.FileStorage;
 
 public class LocalFileStorageService : IFileStorageService
 {

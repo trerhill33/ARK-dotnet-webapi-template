@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.FileStorage;
+namespace ARK.WebApi.Application.Common.FileStorage;
 
 public class FileUploadRequest
 {

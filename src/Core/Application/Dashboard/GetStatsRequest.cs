@@ -1,7 +1,7 @@
-﻿using FSH.WebApi.Application.Identity.Roles;
-using FSH.WebApi.Application.Identity.Users;
+﻿using ARK.WebApi.Application.Identity.Roles;
+using ARK.WebApi.Application.Identity.Users;
 
-namespace FSH.WebApi.Application.Dashboard;
+namespace ARK.WebApi.Application.Dashboard;
 
 public class GetStatsRequest : IRequest<StatsDto>
 {

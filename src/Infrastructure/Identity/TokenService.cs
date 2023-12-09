@@ -2,19 +2,19 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Identity.Tokens;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Auth.Jwt;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Application.Common.Exceptions;
+using ARK.WebApi.Application.Identity.Tokens;
+using ARK.WebApi.Infrastructure.Auth;
+using ARK.WebApi.Infrastructure.Auth.Jwt;
+using ARK.WebApi.Infrastructure.Multitenancy;
+using ARK.WebApi.Shared.Authorization;
+using ARK.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 internal class TokenService : ITokenService
 {
@@ -22,13 +22,13 @@ internal class TokenService : ITokenService
     private readonly IStringLocalizer _t;
     private readonly SecuritySettings _securitySettings;
     private readonly JwtSettings _jwtSettings;
-    private readonly FSHTenantInfo? _currentTenant;
+    private readonly ARKTenantInfo? _currentTenant;
 
     public TokenService(
         UserManager<ApplicationUser> userManager,
         IOptions<JwtSettings> jwtSettings,
         IStringLocalizer<TokenService> localizer,
-        FSHTenantInfo? currentTenant,
+        ARKTenantInfo? currentTenant,
         IOptions<SecuritySettings> securitySettings)
     {
         _userManager = userManager;
@@ -111,12 +111,12 @@ internal class TokenService : ITokenService
         {
             new(ClaimTypes.NameIdentifier, user.Id),
             new(ClaimTypes.Email, user.Email!),
-            new(FSHClaims.Fullname, $"{user.FirstName} {user.LastName}"),
+            new(ARKClaims.Fullname, $"{user.FirstName} {user.LastName}"),
             new(ClaimTypes.Name, user.FirstName ?? string.Empty),
             new(ClaimTypes.Surname, user.LastName ?? string.Empty),
-            new(FSHClaims.IpAddress, ipAddress),
-            new(FSHClaims.Tenant, _currentTenant!.Id),
-            new(FSHClaims.ImageUrl, user.ImageUrl ?? string.Empty),
+            new(ARKClaims.IpAddress, ipAddress),
+            new(ARKClaims.Tenant, _currentTenant!.Id),
+            new(ARKClaims.ImageUrl, user.ImageUrl ?? string.Empty),
             new(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty)
         };
 

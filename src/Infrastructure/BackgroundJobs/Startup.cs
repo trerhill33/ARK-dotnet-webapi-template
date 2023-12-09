@@ -1,4 +1,4 @@
-using FSH.WebApi.Infrastructure.Common;
+using ARK.WebApi.Infrastructure.Common;
 using Hangfire;
 using Hangfire.Console;
 using Hangfire.Console.Extensions;
@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace ARK.WebApi.Infrastructure.BackgroundJobs;
 
 internal static class Startup
 {
@@ -30,11 +30,11 @@ internal static class Startup
         _logger.Information($"Hangfire: Current Storage Provider : {storageSettings.StorageProvider}");
         _logger.Information("For more Hangfire storage, visit https://www.hangfire.io/extensions.html");
 
-        services.AddSingleton<JobActivator, FSHJobActivator>();
+        services.AddSingleton<JobActivator, ARKJobActivator>();
 
         services.AddHangfire((provider, hangfireConfig) => hangfireConfig
             .UseDatabase(storageSettings.StorageProvider, storageSettings.ConnectionString, config)
-            .UseFilter(new FSHJobFilter(provider))
+            .UseFilter(new ARKJobFilter(provider))
             .UseFilter(new LogJobFilter())
             .UseConsole());
 

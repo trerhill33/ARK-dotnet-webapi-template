@@ -1,6 +1,6 @@
-using FSH.WebApi.Shared.Events;
+using ARK.WebApi.Shared.Events;
 
-namespace FSH.WebApi.Application.Common.Events;
+namespace ARK.WebApi.Application.Common.Events;
 
 public class EventNotification<TEvent> : INotification
     where TEvent : IEvent

@@ -1,6 +1,6 @@
-using FSH.WebApi.Application.Catalog.Brands;
+using ARK.WebApi.Application.Catalog.Brands;
 
-namespace FSH.WebApi.Application.Catalog.Products;
+namespace ARK.WebApi.Application.Catalog.Products;
 
 public class ProductDetailsDto : IDto
 {

@@ -1,10 +1,10 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Shared.Notifications;
+using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Shared.Notifications;
 using Microsoft.AspNetCore.SignalR;
-using static FSH.WebApi.Shared.Notifications.NotificationConstants;
+using static ARK.WebApi.Shared.Notifications.NotificationConstants;
 
-namespace FSH.WebApi.Infrastructure.Notifications;
+namespace ARK.WebApi.Infrastructure.Notifications;
 
 public class NotificationSender : INotificationSender
 {

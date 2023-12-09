@@ -1,9 +1,9 @@
-using FSH.WebApi.Application.Auditing;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using ARK.WebApi.Application.Auditing;
+using ARK.WebApi.Infrastructure.Persistence.Context;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.WebApi.Infrastructure.Auditing;
+namespace ARK.WebApi.Infrastructure.Auditing;
 
 public class AuditService : IAuditService
 {

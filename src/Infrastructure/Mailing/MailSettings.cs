@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Mailing;
+namespace ARK.WebApi.Infrastructure.Mailing;
 
 public class MailSettings
 {

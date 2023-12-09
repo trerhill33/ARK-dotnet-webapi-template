@@ -1,9 +1,9 @@
 ﻿using Ardalis.Specification;
-using FSH.WebApi.Application.Catalog.Brands;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Domain.Catalog;
-using FSH.WebApi.Shared.Notifications;
+using ARK.WebApi.Application.Catalog.Brands;
+using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Application.Common.Persistence;
+using ARK.WebApi.Domain.Catalog;
+using ARK.WebApi.Shared.Notifications;
 using Hangfire;
 using Hangfire.Console.Extensions;
 using Hangfire.Console.Progress;
@@ -11,7 +11,7 @@ using Hangfire.Server;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Catalog;
+namespace ARK.WebApi.Infrastructure.Catalog;
 
 public class BrandGeneratorJob : IBrandGeneratorJob
 {

@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.SecurityHeaders;
+﻿namespace ARK.WebApi.Infrastructure.SecurityHeaders;
 
 internal class HeaderNames
 {

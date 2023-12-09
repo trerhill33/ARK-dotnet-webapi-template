@@ -1,22 +1,22 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.BackgroundJobs;
-using FSH.WebApi.Infrastructure.Caching;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Cors;
-using FSH.WebApi.Infrastructure.FileStorage;
-using FSH.WebApi.Infrastructure.Localization;
-using FSH.WebApi.Infrastructure.Mailing;
-using FSH.WebApi.Infrastructure.Mapping;
-using FSH.WebApi.Infrastructure.Middleware;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Infrastructure.Notifications;
-using FSH.WebApi.Infrastructure.OpenApi;
-using FSH.WebApi.Infrastructure.Persistence;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
-using FSH.WebApi.Infrastructure.SecurityHeaders;
-using FSH.WebApi.Infrastructure.Validations;
+using ARK.WebApi.Infrastructure.Auth;
+using ARK.WebApi.Infrastructure.BackgroundJobs;
+using ARK.WebApi.Infrastructure.Caching;
+using ARK.WebApi.Infrastructure.Common;
+using ARK.WebApi.Infrastructure.Cors;
+using ARK.WebApi.Infrastructure.FileStorage;
+using ARK.WebApi.Infrastructure.Localization;
+using ARK.WebApi.Infrastructure.Mailing;
+using ARK.WebApi.Infrastructure.Mapping;
+using ARK.WebApi.Infrastructure.Middleware;
+using ARK.WebApi.Infrastructure.Multitenancy;
+using ARK.WebApi.Infrastructure.Notifications;
+using ARK.WebApi.Infrastructure.OpenApi;
+using ARK.WebApi.Infrastructure.Persistence;
+using ARK.WebApi.Infrastructure.Persistence.Initialization;
+using ARK.WebApi.Infrastructure.SecurityHeaders;
+using ARK.WebApi.Infrastructure.Validations;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -26,13 +26,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
-namespace FSH.WebApi.Infrastructure;
+namespace ARK.WebApi.Infrastructure;
 
 public static class Startup
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {
-        var applicationAssembly = typeof(FSH.WebApi.Application.Startup).GetTypeInfo().Assembly;
+        var applicationAssembly = typeof(ARK.WebApi.Application.Startup).GetTypeInfo().Assembly;
         MapsterSettings.Configure();
         return services
             .AddApiVersioning()

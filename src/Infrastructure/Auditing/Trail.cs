@@ -1,6 +1,6 @@
-using FSH.WebApi.Domain.Common.Contracts;
+using ARK.WebApi.Domain.Common.Contracts;
 
-namespace FSH.WebApi.Infrastructure.Auditing;
+namespace ARK.WebApi.Infrastructure.Auditing;
 
 public class Trail : BaseEntity
 {

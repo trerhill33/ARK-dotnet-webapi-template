@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Domain.Common.Events;
+namespace ARK.WebApi.Domain.Common.Events;
 
 public static class EntityCreatedEvent
 {

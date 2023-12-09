@@ -1,9 +1,9 @@
-using FSH.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 using Serilog.Context;
 
-namespace FSH.WebApi.Infrastructure.Middleware;
+namespace ARK.WebApi.Infrastructure.Middleware;
 
 public class ResponseLoggingMiddleware : IMiddleware
 {

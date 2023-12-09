@@ -1,19 +1,19 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Infrastructure.Auth;
+using ARK.WebApi.Infrastructure.Common;
+using ARK.WebApi.Infrastructure.Multitenancy;
+using ARK.WebApi.Shared.Multitenancy;
 using Hangfire;
 using Hangfire.Server;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace ARK.WebApi.Infrastructure.BackgroundJobs;
 
-public class FSHJobActivator : JobActivator
+public class ARKJobActivator : JobActivator
 {
     private readonly IServiceScopeFactory _scopeFactory;
 
-    public FSHJobActivator(IServiceScopeFactory scopeFactory) =>
+    public ARKJobActivator(IServiceScopeFactory scopeFactory) =>
         _scopeFactory = scopeFactory ?? throw new ArgumentNullException(nameof(scopeFactory));
 
     public override JobActivatorScope BeginScope(PerformContext context) =>
@@ -34,11 +34,11 @@ public class FSHJobActivator : JobActivator
 
         private void ReceiveParameters()
         {
-            var tenantInfo = _context.GetJobParameter<FSHTenantInfo>(MultitenancyConstants.TenantIdName);
+            var tenantInfo = _context.GetJobParameter<ARKTenantInfo>(MultitenancyConstants.TenantIdName);
             if (tenantInfo is not null)
             {
                 _scope.ServiceProvider.GetRequiredService<IMultiTenantContextAccessor>()
-                    .MultiTenantContext = new MultiTenantContext<FSHTenantInfo>
+                    .MultiTenantContext = new MultiTenantContext<ARKTenantInfo>
                     {
                         TenantInfo = tenantInfo
                     };

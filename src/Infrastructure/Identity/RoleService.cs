@@ -1,18 +1,18 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Identity.Roles;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Application.Common.Events;
+using ARK.WebApi.Application.Common.Exceptions;
+using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Application.Identity.Roles;
+using ARK.WebApi.Domain.Identity;
+using ARK.WebApi.Infrastructure.Persistence.Context;
+using ARK.WebApi.Shared.Authorization;
+using ARK.WebApi.Shared.Multitenancy;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 internal class RoleService : IRoleService
 {
@@ -64,7 +64,7 @@ internal class RoleService : IRoleService
         var role = await GetByIdAsync(roleId);
 
         role.Permissions = await _db.RoleClaims
-            .Where(c => c.RoleId == roleId && c.ClaimType == FSHClaims.Permission)
+            .Where(c => c.RoleId == roleId && c.ClaimType == ARKClaims.Permission)
             .Select(c => c.ClaimValue!)
             .ToListAsync(cancellationToken);
 
@@ -95,7 +95,7 @@ internal class RoleService : IRoleService
 
             _ = role ?? throw new NotFoundException(_t["Role Not Found"]);
 
-            if (FSHRoles.IsDefault(role.Name!))
+            if (ARKRoles.IsDefault(role.Name!))
             {
                 throw new ConflictException(string.Format(_t["Not allowed to modify {0} Role."], role.Name));
             }
@@ -120,7 +120,7 @@ internal class RoleService : IRoleService
     {
         var role = await _roleManager.FindByIdAsync(request.RoleId);
         _ = role ?? throw new NotFoundException(_t["Role Not Found"]);
-        if (role.Name == FSHRoles.Admin)
+        if (role.Name == ARKRoles.Admin)
         {
             throw new ConflictException(_t["Not allowed to modify Permissions for this Role."]);
         }
@@ -151,7 +151,7 @@ internal class RoleService : IRoleService
                 _db.RoleClaims.Add(new ApplicationRoleClaim
                 {
                     RoleId = role.Id,
-                    ClaimType = FSHClaims.Permission,
+                    ClaimType = ARKClaims.Permission,
                     ClaimValue = permission,
                     CreatedBy = _currentUser.GetUserId().ToString()
                 });
@@ -170,7 +170,7 @@ internal class RoleService : IRoleService
 
         _ = role ?? throw new NotFoundException(_t["Role Not Found"]);
 
-        if (FSHRoles.IsDefault(role.Name!))
+        if (ARKRoles.IsDefault(role.Name!))
         {
             throw new ConflictException(string.Format(_t["Not allowed to delete {0} Role."], role.Name));
         }

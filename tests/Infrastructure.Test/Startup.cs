@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Infrastructure.Caching;
-using FSH.WebApi.Infrastructure.Common.Services;
-using FSH.WebApi.Infrastructure.Localization;
-using FSH.WebApi.Infrastructure.Persistence.ConnectionString;
+﻿using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Application.Common.Persistence;
+using ARK.WebApi.Infrastructure.Caching;
+using ARK.WebApi.Infrastructure.Common.Services;
+using ARK.WebApi.Infrastructure.Localization;
+using ARK.WebApi.Infrastructure.Persistence.ConnectionString;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Multitenancy;
+namespace ARK.WebApi.Application.Multitenancy;
 
 public class ActivateTenantRequest : IRequest<string>
 {

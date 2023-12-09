@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Caching;
+namespace ARK.WebApi.Application.Common.Caching;
 
 public static class CacheServiceExtensions
 {

@@ -1,9 +1,9 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using FSH.WebApi.Domain.Catalog;
+using ARK.WebApi.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+namespace ARK.WebApi.Infrastructure.Persistence.Configuration;
 
 public class BrandConfig : IEntityTypeConfiguration<Brand>
 {

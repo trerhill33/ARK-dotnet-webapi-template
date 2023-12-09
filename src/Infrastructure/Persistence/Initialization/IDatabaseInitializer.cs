@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Infrastructure.Multitenancy;
+﻿using ARK.WebApi.Infrastructure.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace ARK.WebApi.Infrastructure.Persistence.Initialization;
 
 internal interface IDatabaseInitializer
 {
     Task InitializeDatabasesAsync(CancellationToken cancellationToken);
-    Task InitializeApplicationDbForTenantAsync(FSHTenantInfo tenant, CancellationToken cancellationToken);
+    Task InitializeApplicationDbForTenantAsync(ARKTenantInfo tenant, CancellationToken cancellationToken);
 }

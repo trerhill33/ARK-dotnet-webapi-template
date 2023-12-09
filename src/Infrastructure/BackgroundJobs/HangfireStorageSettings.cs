@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace ARK.WebApi.Infrastructure.BackgroundJobs;
 
 public class HangfireStorageSettings
 {

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Domain.Common.Contracts;
+namespace ARK.WebApi.Domain.Common.Contracts;
 
 public interface ISoftDelete
 {

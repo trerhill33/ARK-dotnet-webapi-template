@@ -1,8 +1,8 @@
-using FSH.WebApi.Domain.Common.Events;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Events;
+using ARK.WebApi.Domain.Common.Events;
+using ARK.WebApi.Domain.Identity;
+using ARK.WebApi.Shared.Events;
 
-namespace FSH.WebApi.Application.Dashboard;
+namespace ARK.WebApi.Application.Dashboard;
 
 public class SendStatsChangedNotificationHandler :
     IEventNotificationHandler<EntityCreatedEvent<Brand>>,

@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Application.Catalog.Products;
+﻿using ARK.WebApi.Application.Catalog.Products;
 
-namespace FSH.WebApi.Application.Catalog.Brands;
+namespace ARK.WebApi.Application.Catalog.Brands;
 
 public class DeleteBrandRequest : IRequest<Guid>
 {

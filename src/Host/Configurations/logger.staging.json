@@ -1,6 +1,6 @@
 {
   "LoggerSettings": {
-    "AppName": "FSH.WebApi",
+    "AppName": "ARK.WebApi",
     "WriteToFile": false,
     "StructuredConsoleLogging": true
   }

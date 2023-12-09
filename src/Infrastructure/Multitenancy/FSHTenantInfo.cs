@@ -1,15 +1,15 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Shared.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.Multitenancy;
+namespace ARK.WebApi.Infrastructure.Multitenancy;
 
-public class FSHTenantInfo : ITenantInfo
+public class ARKTenantInfo : ITenantInfo
 {
-    public FSHTenantInfo()
+    public ARKTenantInfo()
     {
     }
 
-    public FSHTenantInfo(string id, string name, string? connectionString, string adminEmail, string? issuer = null)
+    public ARKTenantInfo(string id, string name, string? connectionString, string adminEmail, string? issuer = null)
     {
         Id = id;
         Identifier = id;

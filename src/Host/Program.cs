@@ -1,13 +1,13 @@
-using FSH.WebApi.Application;
-using FSH.WebApi.Host.Configurations;
-using FSH.WebApi.Host.Controllers;
-using FSH.WebApi.Infrastructure;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Logging.Serilog;
+using ARK.WebApi.Application;
+using ARK.WebApi.Host.Configurations;
+using ARK.WebApi.Host.Controllers;
+using ARK.WebApi.Infrastructure;
+using ARK.WebApi.Infrastructure.Common;
+using ARK.WebApi.Infrastructure.Logging.Serilog;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-[assembly: ApiConventionType(typeof(FSHApiConventions))]
+[assembly: ApiConventionType(typeof(ARKApiConventions))]
 
 StaticLogger.EnsureInitialized();
 Log.Information("Server Booting Up...");

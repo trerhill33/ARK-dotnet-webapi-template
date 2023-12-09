@@ -1,15 +1,15 @@
 ﻿using System.Security.Claims;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Mailing;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Common;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Authorization;
+using ARK.WebApi.Application.Common.Exceptions;
+using ARK.WebApi.Application.Common.Mailing;
+using ARK.WebApi.Application.Identity.Users;
+using ARK.WebApi.Domain.Common;
+using ARK.WebApi.Domain.Identity;
+using ARK.WebApi.Shared.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {
@@ -119,7 +119,7 @@ internal partial class UserService
             throw new InternalServerException(_t["Validation Errors Occurred."], result.GetErrors(_t));
         }
 
-        await _userManager.AddToRoleAsync(user, FSHRoles.Basic);
+        await _userManager.AddToRoleAsync(user, ARKRoles.Basic);
 
         var messages = new List<string> { string.Format(_t["User {0} Registered."], user.UserName) };
 

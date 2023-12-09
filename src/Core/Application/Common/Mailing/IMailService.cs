@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Mailing;
+namespace ARK.WebApi.Application.Common.Mailing;
 
 public interface IMailService : ITransientService
 {

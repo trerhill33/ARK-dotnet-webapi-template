@@ -1,8 +1,8 @@
 using System.Collections.ObjectModel;
 
-namespace FSH.WebApi.Shared.Authorization;
+namespace ARK.WebApi.Shared.Authorization;
 
-public static class FSHAction
+public static class ARKAction
 {
     public const string View = nameof(View);
     public const string Search = nameof(Search);
@@ -15,7 +15,7 @@ public static class FSHAction
     public const string UpgradeSubscription = nameof(UpgradeSubscription);
 }
 
-public static class FSHResource
+public static class ARKResource
 {
     public const string Tenants = nameof(Tenants);
     public const string Dashboard = nameof(Dashboard);
@@ -28,52 +28,52 @@ public static class FSHResource
     public const string Brands = nameof(Brands);
 }
 
-public static class FSHPermissions
+public static class ARKPermissions
 {
-    private static readonly FSHPermission[] _all = new FSHPermission[]
+    private static readonly ARKPermission[] _all = new ARKPermission[]
     {
-        new("View Dashboard", FSHAction.View, FSHResource.Dashboard),
-        new("View Hangfire", FSHAction.View, FSHResource.Hangfire),
-        new("View Users", FSHAction.View, FSHResource.Users),
-        new("Search Users", FSHAction.Search, FSHResource.Users),
-        new("Create Users", FSHAction.Create, FSHResource.Users),
-        new("Update Users", FSHAction.Update, FSHResource.Users),
-        new("Delete Users", FSHAction.Delete, FSHResource.Users),
-        new("Export Users", FSHAction.Export, FSHResource.Users),
-        new("View UserRoles", FSHAction.View, FSHResource.UserRoles),
-        new("Update UserRoles", FSHAction.Update, FSHResource.UserRoles),
-        new("View Roles", FSHAction.View, FSHResource.Roles),
-        new("Create Roles", FSHAction.Create, FSHResource.Roles),
-        new("Update Roles", FSHAction.Update, FSHResource.Roles),
-        new("Delete Roles", FSHAction.Delete, FSHResource.Roles),
-        new("View RoleClaims", FSHAction.View, FSHResource.RoleClaims),
-        new("Update RoleClaims", FSHAction.Update, FSHResource.RoleClaims),
-        new("View Products", FSHAction.View, FSHResource.Products, IsBasic: true),
-        new("Search Products", FSHAction.Search, FSHResource.Products, IsBasic: true),
-        new("Create Products", FSHAction.Create, FSHResource.Products),
-        new("Update Products", FSHAction.Update, FSHResource.Products),
-        new("Delete Products", FSHAction.Delete, FSHResource.Products),
-        new("Export Products", FSHAction.Export, FSHResource.Products),
-        new("View Brands", FSHAction.View, FSHResource.Brands, IsBasic: true),
-        new("Search Brands", FSHAction.Search, FSHResource.Brands, IsBasic: true),
-        new("Create Brands", FSHAction.Create, FSHResource.Brands),
-        new("Update Brands", FSHAction.Update, FSHResource.Brands),
-        new("Delete Brands", FSHAction.Delete, FSHResource.Brands),
-        new("Generate Brands", FSHAction.Generate, FSHResource.Brands),
-        new("Clean Brands", FSHAction.Clean, FSHResource.Brands),
-        new("View Tenants", FSHAction.View, FSHResource.Tenants, IsRoot: true),
-        new("Create Tenants", FSHAction.Create, FSHResource.Tenants, IsRoot: true),
-        new("Update Tenants", FSHAction.Update, FSHResource.Tenants, IsRoot: true),
-        new("Upgrade Tenant Subscription", FSHAction.UpgradeSubscription, FSHResource.Tenants, IsRoot: true)
+        new("View Dashboard", ARKAction.View, ARKResource.Dashboard),
+        new("View Hangfire", ARKAction.View, ARKResource.Hangfire),
+        new("View Users", ARKAction.View, ARKResource.Users),
+        new("Search Users", ARKAction.Search, ARKResource.Users),
+        new("Create Users", ARKAction.Create, ARKResource.Users),
+        new("Update Users", ARKAction.Update, ARKResource.Users),
+        new("Delete Users", ARKAction.Delete, ARKResource.Users),
+        new("Export Users", ARKAction.Export, ARKResource.Users),
+        new("View UserRoles", ARKAction.View, ARKResource.UserRoles),
+        new("Update UserRoles", ARKAction.Update, ARKResource.UserRoles),
+        new("View Roles", ARKAction.View, ARKResource.Roles),
+        new("Create Roles", ARKAction.Create, ARKResource.Roles),
+        new("Update Roles", ARKAction.Update, ARKResource.Roles),
+        new("Delete Roles", ARKAction.Delete, ARKResource.Roles),
+        new("View RoleClaims", ARKAction.View, ARKResource.RoleClaims),
+        new("Update RoleClaims", ARKAction.Update, ARKResource.RoleClaims),
+        new("View Products", ARKAction.View, ARKResource.Products, IsBasic: true),
+        new("Search Products", ARKAction.Search, ARKResource.Products, IsBasic: true),
+        new("Create Products", ARKAction.Create, ARKResource.Products),
+        new("Update Products", ARKAction.Update, ARKResource.Products),
+        new("Delete Products", ARKAction.Delete, ARKResource.Products),
+        new("Export Products", ARKAction.Export, ARKResource.Products),
+        new("View Brands", ARKAction.View, ARKResource.Brands, IsBasic: true),
+        new("Search Brands", ARKAction.Search, ARKResource.Brands, IsBasic: true),
+        new("Create Brands", ARKAction.Create, ARKResource.Brands),
+        new("Update Brands", ARKAction.Update, ARKResource.Brands),
+        new("Delete Brands", ARKAction.Delete, ARKResource.Brands),
+        new("Generate Brands", ARKAction.Generate, ARKResource.Brands),
+        new("Clean Brands", ARKAction.Clean, ARKResource.Brands),
+        new("View Tenants", ARKAction.View, ARKResource.Tenants, IsRoot: true),
+        new("Create Tenants", ARKAction.Create, ARKResource.Tenants, IsRoot: true),
+        new("Update Tenants", ARKAction.Update, ARKResource.Tenants, IsRoot: true),
+        new("Upgrade Tenant Subscription", ARKAction.UpgradeSubscription, ARKResource.Tenants, IsRoot: true)
     };
 
-    public static IReadOnlyList<FSHPermission> All { get; } = new ReadOnlyCollection<FSHPermission>(_all);
-    public static IReadOnlyList<FSHPermission> Root { get; } = new ReadOnlyCollection<FSHPermission>(_all.Where(p => p.IsRoot).ToArray());
-    public static IReadOnlyList<FSHPermission> Admin { get; } = new ReadOnlyCollection<FSHPermission>(_all.Where(p => !p.IsRoot).ToArray());
-    public static IReadOnlyList<FSHPermission> Basic { get; } = new ReadOnlyCollection<FSHPermission>(_all.Where(p => p.IsBasic).ToArray());
+    public static IReadOnlyList<ARKPermission> All { get; } = new ReadOnlyCollection<ARKPermission>(_all);
+    public static IReadOnlyList<ARKPermission> Root { get; } = new ReadOnlyCollection<ARKPermission>(_all.Where(p => p.IsRoot).ToArray());
+    public static IReadOnlyList<ARKPermission> Admin { get; } = new ReadOnlyCollection<ARKPermission>(_all.Where(p => !p.IsRoot).ToArray());
+    public static IReadOnlyList<ARKPermission> Basic { get; } = new ReadOnlyCollection<ARKPermission>(_all.Where(p => p.IsBasic).ToArray());
 }
 
-public record FSHPermission(string Description, string Action, string Resource, bool IsBasic = false, bool IsRoot = false)
+public record ARKPermission(string Description, string Action, string Resource, bool IsBasic = false, bool IsRoot = false)
 {
     public string Name => NameFor(Action, Resource);
     public static string NameFor(string action, string resource) => $"Permissions.{resource}.{action}";

@@ -1,8 +1,8 @@
-﻿using FSH.WebApi.Application.Common.Caching;
+﻿using ARK.WebApi.Application.Common.Caching;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Caching;
+namespace ARK.WebApi.Infrastructure.Caching;
 
 internal static class Startup
 {

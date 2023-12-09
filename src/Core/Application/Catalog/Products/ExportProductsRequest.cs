@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Application.Common.Exporters;
+﻿using ARK.WebApi.Application.Common.Exporters;
 
-namespace FSH.WebApi.Application.Catalog.Products;
+namespace ARK.WebApi.Application.Catalog.Products;
 
 public class ExportProductsRequest : BaseFilter, IRequest<Stream>
 {

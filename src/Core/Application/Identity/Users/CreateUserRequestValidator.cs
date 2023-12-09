@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Identity.Users;
+namespace ARK.WebApi.Application.Identity.Users;
 
 public class CreateUserRequestValidator : CustomValidator<CreateUserRequest>
 {

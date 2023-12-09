@@ -1,6 +1,6 @@
-using FSH.WebApi.Shared.Events;
+using ARK.WebApi.Shared.Events;
 
-namespace FSH.WebApi.Domain.Common.Contracts;
+namespace ARK.WebApi.Domain.Common.Contracts;
 
 public abstract class DomainEvent : IEvent
 {

@@ -1,11 +1,11 @@
-﻿using FSH.WebApi.Application.Catalog.Products;
+﻿using ARK.WebApi.Application.Catalog.Products;
 
-namespace FSH.WebApi.Host.Controllers.Catalog;
+namespace ARK.WebApi.Host.Controllers.Catalog;
 
 public class ProductsController : VersionedApiController
 {
     [HttpPost("search")]
-    [MustHavePermission(FSHAction.Search, FSHResource.Products)]
+    [MustHavePermission(ARKAction.Search, ARKResource.Products)]
     [OpenApiOperation("Search products using available filters.", "")]
     public Task<PaginationResponse<ProductDto>> SearchAsync(SearchProductsRequest request)
     {
@@ -13,7 +13,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpGet("{id:guid}")]
-    [MustHavePermission(FSHAction.View, FSHResource.Products)]
+    [MustHavePermission(ARKAction.View, ARKResource.Products)]
     [OpenApiOperation("Get product details.", "")]
     public Task<ProductDetailsDto> GetAsync(Guid id)
     {
@@ -21,7 +21,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpGet("dapper")]
-    [MustHavePermission(FSHAction.View, FSHResource.Products)]
+    [MustHavePermission(ARKAction.View, ARKResource.Products)]
     [OpenApiOperation("Get product details via dapper.", "")]
     public Task<ProductDto> GetDapperAsync(Guid id)
     {
@@ -29,7 +29,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpPost]
-    [MustHavePermission(FSHAction.Create, FSHResource.Products)]
+    [MustHavePermission(ARKAction.Create, ARKResource.Products)]
     [OpenApiOperation("Create a new product.", "")]
     public Task<Guid> CreateAsync(CreateProductRequest request)
     {
@@ -37,7 +37,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpPut("{id:guid}")]
-    [MustHavePermission(FSHAction.Update, FSHResource.Products)]
+    [MustHavePermission(ARKAction.Update, ARKResource.Products)]
     [OpenApiOperation("Update a product.", "")]
     public async Task<ActionResult<Guid>> UpdateAsync(UpdateProductRequest request, Guid id)
     {
@@ -47,7 +47,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpDelete("{id:guid}")]
-    [MustHavePermission(FSHAction.Delete, FSHResource.Products)]
+    [MustHavePermission(ARKAction.Delete, ARKResource.Products)]
     [OpenApiOperation("Delete a product.", "")]
     public Task<Guid> DeleteAsync(Guid id)
     {
@@ -55,7 +55,7 @@ public class ProductsController : VersionedApiController
     }
 
     [HttpPost("export")]
-    [MustHavePermission(FSHAction.Export, FSHResource.Products)]
+    [MustHavePermission(ARKAction.Export, ARKResource.Products)]
     [OpenApiOperation("Export a products.", "")]
     public async Task<FileResult> ExportAsync(ExportProductsRequest filter)
     {

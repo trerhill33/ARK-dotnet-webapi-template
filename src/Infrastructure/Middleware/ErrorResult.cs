@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Middleware;
+﻿namespace ARK.WebApi.Infrastructure.Middleware;
 
 public class ErrorResult
 {

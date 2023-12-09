@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Models;
+namespace ARK.WebApi.Application.Common.Models;
 
 public class Search
 {

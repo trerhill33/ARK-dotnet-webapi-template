@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Shared.Multitenancy;
+﻿using ARK.WebApi.Shared.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.OpenApi;
+namespace ARK.WebApi.Infrastructure.OpenApi;
 
 public class TenantIdHeaderAttribute : SwaggerHeaderAttribute
 {

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Auditing;
+namespace ARK.WebApi.Application.Auditing;
 
 public interface IAuditService : ITransientService
 {

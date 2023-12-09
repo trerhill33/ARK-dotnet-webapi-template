@@ -1,7 +1,7 @@
-using FSH.WebApi.Application.Multitenancy;
-using FSH.WebApi.Infrastructure.Persistence;
-using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Application.Multitenancy;
+using ARK.WebApi.Infrastructure.Persistence;
+using ARK.WebApi.Shared.Authorization;
+using ARK.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
 
-namespace FSH.WebApi.Infrastructure.Multitenancy;
+namespace ARK.WebApi.Infrastructure.Multitenancy;
 
 internal static class Startup
 {
@@ -22,11 +22,11 @@ internal static class Startup
                 var databaseSettings = p.GetRequiredService<IOptions<DatabaseSettings>>().Value;
                 m.UseDatabase(databaseSettings.DBProvider, databaseSettings.ConnectionString);
             })
-            .AddMultiTenant<FSHTenantInfo>()
-                .WithClaimStrategy(FSHClaims.Tenant)
+            .AddMultiTenant<ARKTenantInfo>()
+                .WithClaimStrategy(ARKClaims.Tenant)
                 .WithHeaderStrategy(MultitenancyConstants.TenantIdName)
                 .WithQueryStringStrategy(MultitenancyConstants.TenantIdName)
-                .WithEFCoreStore<TenantDbContext, FSHTenantInfo>()
+                .WithEFCoreStore<TenantDbContext, ARKTenantInfo>()
                 .Services
             .AddScoped<ITenantService, TenantService>();
     }
@@ -34,7 +34,7 @@ internal static class Startup
     internal static IApplicationBuilder UseMultiTenancy(this IApplicationBuilder app) =>
         app.UseMultiTenant();
 
-    private static FinbuckleMultiTenantBuilder<FSHTenantInfo> WithQueryStringStrategy(this FinbuckleMultiTenantBuilder<FSHTenantInfo> builder, string queryStringKey) =>
+    private static FinbuckleMultiTenantBuilder<ARKTenantInfo> WithQueryStringStrategy(this FinbuckleMultiTenantBuilder<ARKTenantInfo> builder, string queryStringKey) =>
         builder.WithDelegateStrategy(context =>
         {
             if (context is not HttpContext httpContext)

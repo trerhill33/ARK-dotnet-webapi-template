@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Catalog.Brands;
+namespace ARK.WebApi.Application.Catalog.Brands;
 
 public class SearchBrandsRequest : PaginationFilter, IRequest<PaginationResponse<BrandDto>>
 {

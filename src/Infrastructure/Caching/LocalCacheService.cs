@@ -1,8 +1,8 @@
-using FSH.WebApi.Application.Common.Caching;
+using ARK.WebApi.Application.Common.Caching;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Caching;
+namespace ARK.WebApi.Infrastructure.Caching;
 
 public class LocalCacheService : ICacheService
 {

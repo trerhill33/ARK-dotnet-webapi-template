@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
+﻿using ARK.WebApi.Application.Common.Events;
+using ARK.WebApi.Application.Identity.Users;
+using ARK.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 internal class InvalidateUserPermissionCacheHandler :
     IEventNotificationHandler<ApplicationUserUpdatedEvent>,

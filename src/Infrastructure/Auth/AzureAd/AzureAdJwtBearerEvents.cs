@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Application.Common.Exceptions;
+using ARK.WebApi.Application.Identity.Users;
+using ARK.WebApi.Infrastructure.Multitenancy;
+using ARK.WebApi.Shared.Authorization;
+using ARK.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 using Serilog;
 
-namespace FSH.WebApi.Infrastructure.Auth.AzureAd;
+namespace ARK.WebApi.Infrastructure.Auth.AzureAd;
 
 internal class AzureAdJwtBearerEvents : JwtBearerEvents
 {
@@ -71,7 +71,7 @@ internal class AzureAdJwtBearerEvents : JwtBearerEvents
         var identity = principal.Identities.First();
 
         // Adding tenant claim.
-        identity.AddClaim(new Claim(FSHClaims.Tenant, tenant.Id));
+        identity.AddClaim(new Claim(ARKClaims.Tenant, tenant.Id));
 
         // Set new tenant info to the HttpContext so the right connectionstring is used.
         context.HttpContext.TrySetTenantInfo(tenant, false);

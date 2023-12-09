@@ -1,6 +1,6 @@
-using FSH.WebApi.Domain.Common.Events;
+using ARK.WebApi.Domain.Common.Events;
 
-namespace FSH.WebApi.Application.Catalog.Products.EventHandlers;
+namespace ARK.WebApi.Application.Catalog.Products.EventHandlers;
 
 public class ProductCreatedEventHandler : EventNotificationHandler<EntityCreatedEvent<Product>>
 {

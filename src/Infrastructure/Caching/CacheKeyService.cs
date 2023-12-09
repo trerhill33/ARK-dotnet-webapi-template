@@ -1,7 +1,7 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Caching;
+using ARK.WebApi.Application.Common.Caching;
 
-namespace FSH.WebApi.Infrastructure.Caching;
+namespace ARK.WebApi.Infrastructure.Caching;
 
 public class CacheKeyService : ICacheKeyService
 {

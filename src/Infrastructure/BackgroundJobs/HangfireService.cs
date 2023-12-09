@@ -1,8 +1,8 @@
 using System.Linq.Expressions;
-using FSH.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Application.Common.Interfaces;
 using Hangfire;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace ARK.WebApi.Infrastructure.BackgroundJobs;
 
 public class HangfireService : IJobService
 {

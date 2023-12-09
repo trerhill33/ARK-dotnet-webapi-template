@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Localization;
+﻿namespace ARK.WebApi.Infrastructure.Localization;
 
 public class LocalizationSettings
 {

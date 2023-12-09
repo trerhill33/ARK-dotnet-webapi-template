@@ -1,7 +1,7 @@
-﻿using FSH.WebApi.Application.Common.Persistence;
+﻿using ARK.WebApi.Application.Common.Persistence;
 using Xunit;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Tests;
+namespace ARK.WebApi.Infrastructure.Persistence.Tests;
 
 public class ConnectionStringSecurerTests
 {

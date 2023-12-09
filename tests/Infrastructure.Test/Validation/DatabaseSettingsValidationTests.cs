@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using FSH.WebApi.Infrastructure.Persistence;
+using ARK.WebApi.Infrastructure.Persistence;
 using Xunit;
 
 namespace Infrastructure.Test;

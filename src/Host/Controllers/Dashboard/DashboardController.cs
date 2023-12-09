@@ -1,11 +1,11 @@
-using FSH.WebApi.Application.Dashboard;
+using ARK.WebApi.Application.Dashboard;
 
-namespace FSH.WebApi.Host.Controllers.Dashboard;
+namespace ARK.WebApi.Host.Controllers.Dashboard;
 
 public class DashboardController : VersionedApiController
 {
     [HttpGet]
-    [MustHavePermission(FSHAction.View, FSHResource.Dashboard)]
+    [MustHavePermission(ARKAction.View, ARKResource.Dashboard)]
     [OpenApiOperation("Get statistics for the dashboard.", "")]
     public Task<StatsDto> GetAsync()
     {

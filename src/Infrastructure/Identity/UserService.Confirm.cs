@@ -1,11 +1,11 @@
 using System.Text;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Shared.Multitenancy;
+using ARK.WebApi.Application.Common.Exceptions;
+using ARK.WebApi.Infrastructure.Common;
+using ARK.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace ARK.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {

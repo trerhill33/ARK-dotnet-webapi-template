@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Mapping;
+﻿namespace ARK.WebApi.Infrastructure.Mapping;
 
 public class MapsterSettings
 {

@@ -1,9 +1,9 @@
 using System.Security.Claims;
-using FSH.WebApi.Application.Auditing;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Application.Identity.Users.Password;
+using ARK.WebApi.Application.Auditing;
+using ARK.WebApi.Application.Identity.Users;
+using ARK.WebApi.Application.Identity.Users.Password;
 
-namespace FSH.WebApi.Host.Controllers.Identity;
+namespace ARK.WebApi.Host.Controllers.Identity;
 
 public class PersonalController : VersionNeutralApiController
 {
@@ -35,7 +35,7 @@ public class PersonalController : VersionNeutralApiController
 
     [HttpPut("change-password")]
     [OpenApiOperation("Change password of currently logged in user.", "")]
-    [ApiConventionMethod(typeof(FSHApiConventions), nameof(FSHApiConventions.Register))]
+    [ApiConventionMethod(typeof(ARKApiConventions), nameof(ARKApiConventions.Register))]
     public async Task<ActionResult> ChangePasswordAsync(ChangePasswordRequest model)
     {
         if (User.GetUserId() is not { } userId || string.IsNullOrEmpty(userId))

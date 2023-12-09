@@ -1,12 +1,12 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Domain.Catalog;
-using FSH.WebApi.Infrastructure.Persistence.Configuration;
+using ARK.WebApi.Application.Common.Events;
+using ARK.WebApi.Application.Common.Interfaces;
+using ARK.WebApi.Domain.Catalog;
+using ARK.WebApi.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Context;
+namespace ARK.WebApi.Infrastructure.Persistence.Context;
 
 public class ApplicationDbContext : BaseDbContext
 {

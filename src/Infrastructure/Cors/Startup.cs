@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Infrastructure.Common.Settings;
+﻿using ARK.WebApi.Infrastructure.Common.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Cors;
+namespace ARK.WebApi.Infrastructure.Cors;
 
 internal static class Startup
 {

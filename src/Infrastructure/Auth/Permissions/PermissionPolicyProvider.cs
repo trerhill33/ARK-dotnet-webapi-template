@@ -1,8 +1,8 @@
-using FSH.WebApi.Shared.Authorization;
+using ARK.WebApi.Shared.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Auth.Permissions;
+namespace ARK.WebApi.Infrastructure.Auth.Permissions;
 
 internal class PermissionPolicyProvider : IAuthorizationPolicyProvider
 {
@@ -17,7 +17,7 @@ internal class PermissionPolicyProvider : IAuthorizationPolicyProvider
 
     public Task<AuthorizationPolicy?> GetPolicyAsync(string policyName)
     {
-        if (policyName.StartsWith(FSHClaims.Permission, StringComparison.OrdinalIgnoreCase))
+        if (policyName.StartsWith(ARKClaims.Permission, StringComparison.OrdinalIgnoreCase))
         {
             var policy = new AuthorizationPolicyBuilder();
             policy.AddRequirements(new PermissionRequirement(policyName));

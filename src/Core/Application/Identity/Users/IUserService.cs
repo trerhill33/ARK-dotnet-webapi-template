@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using FSH.WebApi.Application.Identity.Users.Password;
+using ARK.WebApi.Application.Identity.Users.Password;
 
-namespace FSH.WebApi.Application.Identity.Users;
+namespace ARK.WebApi.Application.Identity.Users;
 
 public interface IUserService : ITransientService
 {
