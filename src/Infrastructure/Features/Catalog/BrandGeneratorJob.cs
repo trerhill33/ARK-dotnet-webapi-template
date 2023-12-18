@@ -11,7 +11,7 @@ using Hangfire.Server;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace ARK.WebApi.Infrastructure.Catalog;
+namespace ARK.WebApi.Infrastructure.Features.Catalog;
 
 public class BrandGeneratorJob : IBrandGeneratorJob
 {
@@ -67,12 +67,12 @@ public class BrandGeneratorJob : IBrandGeneratorJob
             await _mediator.Send(
                 new CreateBrandRequest
                 {
-                    Name = $"Brand Random - {Guid.NewGuid()}",
+                    Name = $"Brand Random - {DefaultIdType.NewGuid()}",
                     Description = "Funny description"
                 },
                 cancellationToken);
 
-            await NotifyAsync("Progress: ", nSeed > 0 ? (index * 100 / nSeed) : 0, cancellationToken);
+            await NotifyAsync("Progress: ", nSeed > 0 ? index * 100 / nSeed : 0, cancellationToken);
         }
 
         await NotifyAsync("Job successfully completed", 0, cancellationToken);

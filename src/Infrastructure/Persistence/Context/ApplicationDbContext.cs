@@ -2,7 +2,6 @@ using ARK.WebApi.Application.Common.Events;
 using ARK.WebApi.Application.Common.Interfaces;
 using ARK.WebApi.Domain.Catalog;
 using ARK.WebApi.Domain.Support;
-using ARK.WebApi.Infrastructure.Persistence.Configuration;
 using Finbuckle.MultiTenant;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;

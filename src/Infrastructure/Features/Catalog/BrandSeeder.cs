@@ -5,7 +5,7 @@ using ARK.WebApi.Infrastructure.Persistence.Context;
 using ARK.WebApi.Infrastructure.Persistence.Initialization;
 using Microsoft.Extensions.Logging;
 
-namespace ARK.WebApi.Infrastructure.Catalog;
+namespace ARK.WebApi.Infrastructure.Features.Catalog;
 
 public class BrandSeeder : ICustomSeeder
 {

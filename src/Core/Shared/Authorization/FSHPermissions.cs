@@ -26,6 +26,7 @@ public static class ARKResource
     public const string RoleClaims = nameof(RoleClaims);
     public const string Products = nameof(Products);
     public const string Brands = nameof(Brands);
+    public const string Support = nameof(Support);
 }
 
 public static class ARKPermissions

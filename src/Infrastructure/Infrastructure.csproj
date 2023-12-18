@@ -69,7 +69,7 @@
         <ProjectReference Include="..\Core\Domain\Domain.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <None Update="Catalog\*.json" CopyToOutputDirectory="PreserveNewest" />
+        <None Update="Features\Catalog\*.json" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Update="Roslynator.Analyzers" Version="4.2.0">
